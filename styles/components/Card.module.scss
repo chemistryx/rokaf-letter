@@ -1,0 +1,32 @@
+@import "styles/variables";
+
+.base {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    box-shadow: var(--box-shadow-md);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    width: 50%;
+
+    &.center {
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media screen and (max-width: $viewport-xl) {
+        width: 60%;
+    }
+
+    @media screen and (max-width: $viewport-lg) {
+        width: 70%;
+    }
+
+    @media screen and (max-width: $viewport-md) {
+        width: 85%;
+    }
+
+    @media screen and (max-width: $viewport-sm) {
+        width: 95%;
+    }
+}

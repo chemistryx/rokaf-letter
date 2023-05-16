@@ -1,0 +1,79 @@
+.base {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+
+    .iconWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--dark);
+        border-radius: calc(var(--border-radius) * 3.5);
+        width: 4rem;
+        height: 4rem;
+
+        svg {
+            color: var(--white);
+            animation: spin .7s both ease-in-out;
+
+            @keyframes spin {
+                from {
+                    opacity: 0;
+                    transform: rotate(0deg) scale3d(0.5, 0.5, 0.5);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+
+    .title {
+        margin: 1rem 0;
+        white-space: nowrap;
+    }
+
+    .description {
+        color: var(--gray600);
+
+        &.error {
+            color: var(--gray400);
+            font-size: .7rem;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            font-weight: 500;
+        }
+    }
+
+    .infoWrapper {
+        margin: 1rem 0;
+        padding: 1rem;
+        background: var(--gray100);
+        border-radius: var(--border-radius);
+        color: var(--secondary);
+        font-size: .9rem;
+    }
+
+    .footer {
+        display: flex;
+        align-items: center;
+
+        a {
+            display: flex;
+            align-items: center;
+            color: var(--gray500);
+
+            svg {
+                margin-right: .2rem;
+            }
+        }
+    }
+
+}

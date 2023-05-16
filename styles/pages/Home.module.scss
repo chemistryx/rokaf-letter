@@ -1,0 +1,104 @@
+@import "styles/variables";
+
+.base {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    .header {
+        display: flex;
+        margin: 2rem 0;
+
+        @media screen and (max-width: $viewport-sm) {
+            font-size: .9rem;
+        }
+    }
+
+    .spinnerWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+
+        svg {
+            animation: spin 2s both infinite;
+
+            @keyframes spin {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+
+    .formWrapper {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-weight: 600;
+            margin-bottom: .2rem;
+
+            .counter {
+                font-size: .9rem;
+                font-weight: 500;
+                color: var(--gray500);
+
+                .highlight {
+                    color: var(--primary);
+                }
+            }
+        }
+
+        input,
+        textarea {
+            padding: .7rem;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--gray200);
+            margin-bottom: 1rem;
+            resize: none;
+            font-size: 1rem;
+            outline: none;
+
+            &:focus {
+                box-shadow: var(--box-shadow-sm);
+            }
+
+            &:disabled {
+                cursor: not-allowed;
+            }
+        }
+
+        textarea {
+            height: 30vh;
+            font-family: var(--font-family);
+        }
+
+        button {
+            background: var(--primary);
+            border-radius: var(--border-radius);
+            border: none;
+            padding: 1rem;
+            color: var(--white);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+
+            &:hover {
+                background: var(--primary-dark);
+            }
+
+            &:disabled {
+                background: var(--primary-light);
+                cursor: not-allowed;
+            }
+        }
+    }
+}

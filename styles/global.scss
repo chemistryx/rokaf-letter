@@ -1,0 +1,40 @@
+:root {
+    --font-family: "SUIT Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    --border-radius: .5rem;
+    --line-height: 1.4;
+    --box-shadow-sm: 0px 0px 7.5px -5px rgb(0 0 0 / 70%);
+    --box-shadow-md: 0px 0px 10px -7.5px rgb(0 0 0 / 70%);
+    --white: #fcfcfc;
+    --gray100: #f4f4f4;
+    --gray200: #eaeaea;
+    --gray400: #bfbfbf;
+    --gray500: #aaaaaa;
+    --gray600: #555555;
+    --dark: #222222;
+    --primary: #4568f0;
+    --primary-light: #6a86f3;
+    --primary-dark: #2850ed;
+    --secondary: #f04568;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    line-height: var(--line-height);
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--white);
+    font-family: var(--font-family);
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
